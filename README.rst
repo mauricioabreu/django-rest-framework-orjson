@@ -33,10 +33,10 @@ You can use this library by adding the following lines to your settings file:
 
     REST_FRAMEWORK = {
         'DEFAULT_RENDERER_CLASSES': (
-            'drf_orjson.renderers.ORJSONRenderer',
+            'rest_framework_orjson.renderers.ORJSONRenderer',
         ),
         'DEFAULT_PARSER_CLASSES': (
-            'drf_orjson.parsers.ORJSONParser',
+            'rest_framework_orjson.parsers.ORJSONParser',
         ),
     }
 
