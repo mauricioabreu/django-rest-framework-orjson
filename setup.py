@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import io
 import re
 import os
 import sys
@@ -13,6 +14,11 @@ url = 'https://github.com/mauricioabreu/django-rest-framework-orjson'
 author = 'Maurício de Abreu Antunes'
 author_email = 'mauricio.abreua@gmail.com'
 license = 'BSD'
+
+
+def read(path):
+    with io.open('README.rst', 'rt', encoding='utf8') as f:
+        return f.read()
 
 
 def get_version(package):
@@ -70,6 +76,7 @@ setup(
     url=url,
     license=license,
     description=description,
+    long_description=read('README.rst'),
     author=author,
     author_email=author_email,
     packages=get_packages(package),
