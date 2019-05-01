@@ -11,9 +11,9 @@ Provides parser and renderer support for orjson library
 Requirements
 ------------
 
--  Python (2.7, 3.3, 3.4)
--  Django (1.6, 1.7, 1.8)
--  Django REST Framework (2.4, 3.0, 3.1)
+-  Python (3.5, 3.6, 3.7)
+-  Django (1.11, 2.0, 2.1)
+-  Django REST Framework (3.6, 3.7, 3.8, 3.9)
 
 Installation
 ------------
