@@ -27,7 +27,18 @@ Install using ``pip``\ …
 Example
 -------
 
-TODO: Write example.
+You can use this library by adding the following lines to your settings file:
+
+.. code:: python
+
+    REST_FRAMEWORK = {
+        'DEFAULT_RENDERER_CLASSES': (
+            'drf_orjson.renderers.ORJSONRenderer',
+        ),
+        'DEFAULT_PARSER_CLASSES': (
+            'drf_orjson.parsers.ORJSONParser',
+        ),
+    }
 
 Testing
 -------
