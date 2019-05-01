@@ -2,42 +2,26 @@ language: python
 
 sudo: false
 
-env:
-    - TOX_ENV=py27-flake8
-    - TOX_ENV=py27-docs
-    - TOX_ENV=py27-django1.6-drf2.4
-    - TOX_ENV=py27-django1.6-drf3.0
-    - TOX_ENV=py27-django1.6-drf3.1
-    - TOX_ENV=py27-django1.7-drf2.4
-    - TOX_ENV=py27-django1.7-drf3.0
-    - TOX_ENV=py27-django1.7-drf3.1
-    - TOX_ENV=py27-django1.8-drf2.4
-    - TOX_ENV=py27-django1.8-drf3.0
-    - TOX_ENV=py27-django1.8-drf3.1
-    - TOX_ENV=py33-django1.6-drf2.4
-    - TOX_ENV=py33-django1.6-drf3.0
-    - TOX_ENV=py33-django1.6-drf3.1
-    - TOX_ENV=py33-django1.7-drf2.4
-    - TOX_ENV=py33-django1.7-drf3.0
-    - TOX_ENV=py33-django1.7-drf3.1
-    - TOX_ENV=py33-django1.8-drf2.4
-    - TOX_ENV=py33-django1.8-drf3.0
-    - TOX_ENV=py33-django1.8-drf3.1
-    - TOX_ENV=py34-django1.6-drf2.4
-    - TOX_ENV=py34-django1.6-drf3.0
-    - TOX_ENV=py34-django1.6-drf3.1
-    - TOX_ENV=py34-django1.7-drf2.4
-    - TOX_ENV=py34-django1.7-drf3.0
-    - TOX_ENV=py34-django1.7-drf3.1
-    - TOX_ENV=py34-django1.8-drf2.4
-    - TOX_ENV=py34-django1.8-drf3.0
-    - TOX_ENV=py34-django1.8-drf3.1
-
 matrix:
   fast_finish: true
+  include:
+    - python: 3.5
+      dist: xenial
+      sudo: required
+      env: TOXENV=py35-django21-drf39
+
+    - python: 3.6
+      dist: xenial
+      sudo: required
+      env: TOXENV=py36-django21-drf39
+
+    - python: 3.7
+      dist: xenial
+      sudo: required
+      env: TOXENV=py37-django21-drf39
 
 install:
   - pip install tox
 
 script:
-    - tox -e $TOX_ENV
+    - tox
