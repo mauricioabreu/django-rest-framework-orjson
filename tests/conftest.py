@@ -42,6 +42,14 @@ def pytest_configure():
             'django.contrib.auth.hashers.MD5PasswordHasher',
             'django.contrib.auth.hashers.CryptPasswordHasher',
         ),
+        REST_FRAMEWORK={
+            'DEFAULT_RENDERER_CLASSES': (
+                'rest_framework_orjson.renderers.ORJSONRenderer',
+            ),
+            'DEFAULT_PARSER_CLASSES': (
+                'rest_framework_orjson.parsers.ORJSONParser',
+            ),
+        },
     )
 
     try:
