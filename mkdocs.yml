@@ -1,0 +1,4 @@
+site_name: djangorestframework-orjson
+site_description: Provides parser and renderer support for orjson library
+repo_url: https://github.com/mauricioabreu/django-rest-framework-orjson
+site_dir: html
