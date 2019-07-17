@@ -10,9 +10,6 @@ class ORJSONRenderer(JSONRenderer):
         """
         if data is None:
             return bytes()
-
-        renderer_context = renderer_context or {}
-        indent = self.get_indent(accepted_media_type, renderer_context)
         return orjson.dumps(data, default=serialize_arbitrary_type)
 
 

@@ -1,6 +1,8 @@
+import codecs
+
+import orjson
 from django.conf import settings
 from rest_framework_orjson.renderers import ORJSONRenderer
-import orjson
 from rest_framework.parsers import BaseParser
 
 
